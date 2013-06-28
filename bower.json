@@ -1,0 +1,10 @@
+{
+  "name": "iso-3166-country-codes",
+  "version": "1.0.0",
+  "main": "iso-3166-country-codes.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ]
+}
