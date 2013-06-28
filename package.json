@@ -1,0 +1,28 @@
+{
+  "name": "iso-3166-country-codes-angular",
+  "version": "1.0.0",
+  "description": "An AngularJS module to work with Country Codes",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BluePyth/iso-3166-country-codes-angular.git"
+  },
+  "keywords": [
+    "Country",
+    "Code",
+    "ISO",
+    "3166"
+  ],
+  "author": "Romain Sertelon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BluePyth/iso-3166-country-codes-angular/issues"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-uglify": "~0.2.2",
+    "grunt-contrib-jshint": "~0.6.0"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  }
+}
