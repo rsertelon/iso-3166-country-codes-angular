@@ -2,7 +2,9 @@
 
 angular.module('iso-3166-country-codes', [])
   .factory('ISO3166', function() {
-    var codeToCountry = [
+    var holder = {};
+    
+    holder.codeToCountry = {
       'AF': 'AFGHANISTAN',
       'AX': 'ÅLAND ISLANDS',
       'AL': 'ALBANIA',
@@ -252,17 +254,15 @@ angular.module('iso-3166-country-codes', [])
       'YE': 'YEMEN',
       'ZM': 'ZAMBIA',
       'ZW': 'ZIMBABWE',
-    ];
-
-    var holder = {};
-
-    holder.isCountryCode = function (input) {
-      return angular.isDefined(codeToCountry.input);
     };
 
-    holder.getCountryName = function(country_code) {
-      return codeToCountry.country_code;
-    }
+    holder.isCountryCode = function (input) {
+      return angular.isDefined(this.codeToCountry[input]);
+    };
+
+    holder.getCountryName = function(countryCode) {
+      return this.codeToCountry[countryCode];
+    };
 
     return holder;
   })
