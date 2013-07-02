@@ -7,7 +7,7 @@ module.exports = function(grunt) {
     uglify: {
       build: {
         files: {
-          './iso-3166-country-codes-angular.min.js': ['src/iso-3166-country-codes-angular.js']
+          'dist/iso-3166-country-codes-angular.min.js': ['src/iso-3166-country-codes-angular.js']
         }
       }
     },
