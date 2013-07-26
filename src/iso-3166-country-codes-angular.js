@@ -271,4 +271,20 @@ angular.module('iso-3166-country-codes', [])
       var result = ISO3166.getCountryName(input);
       return angular.isUndefined(result) ? input : result;
     };
+  })
+  .directive('countryCode', function(ISO3166) {
+    return {
+      require: 'ngModel',
+      link: function(scope, elm, attrs, ctrl) {
+        ctrl.$parsers.unshift(function(viewValue) {
+          if(ISO3166.isCountryCode(viewValue)) {
+            ctrl.$setValidity('countrycode', true);
+            return viewValue;
+          } else {
+            ctrl.$setValidity('countrycode', false);
+            return undefined;
+          }
+        });
+      }
+    };
   });
