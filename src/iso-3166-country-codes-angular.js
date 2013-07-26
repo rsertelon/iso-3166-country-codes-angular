@@ -3,7 +3,7 @@
 angular.module('iso-3166-country-codes', [])
   .factory('ISO3166', function() {
     var holder = {};
-    
+
     holder.codeToCountry = {
       'AF': 'AFGHANISTAN',
       'AX': 'ÅLAND ISLANDS',
@@ -266,13 +266,13 @@ angular.module('iso-3166-country-codes', [])
 
     return holder;
   })
-  .filter('country', function(ISO3166){
+  .filter('country', ['ISO3166', function(ISO3166){
     return function (input) {
       var result = ISO3166.getCountryName(input);
       return angular.isUndefined(result) ? input : result;
     };
-  })
-  .directive('countryCode', function(ISO3166) {
+  }])
+  .directive('countryCode', ['ISO3166', function(ISO3166) {
     return {
       require: 'ngModel',
       link: function(scope, elm, attrs, ctrl) {
@@ -287,4 +287,4 @@ angular.module('iso-3166-country-codes', [])
         });
       }
     };
-  });
+  }]);
