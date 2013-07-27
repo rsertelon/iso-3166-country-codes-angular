@@ -32,7 +32,7 @@ angular.module('myApp')
     // FRANCE
 
     // Direct access to the data
-    console.log(ISO3166.codeToCountry)
+    console.log(ISO3166.codeToCountry);
     // {
     //   'FR': 'FRANCE',
     //   ...
@@ -44,7 +44,7 @@ angular.module('myApp')
 
 If you get country codes from your REST server, you can print its standard name with the provided filter:
 
-`̀ `html
+```html
 <!-- if countryCode is 'FR', will print 'FRANCE' -->
 <p>{{countryCode | isoCountry }}</p>
 ```
