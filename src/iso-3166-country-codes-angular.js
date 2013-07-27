@@ -266,7 +266,7 @@ angular.module('iso-3166-country-codes', [])
 
     return holder;
   })
-  .filter('country', ['ISO3166', function(ISO3166){
+  .filter('isoCountry', ['ISO3166', function(ISO3166){
     return function (input) {
       var result = ISO3166.getCountryName(input);
       return angular.isUndefined(result) ? input : result;
