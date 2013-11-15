@@ -37,6 +37,13 @@ angular.module('myApp')
     //   'FR': 'FRANCE',
     //   ...
     // }
+
+    // Pre define needed countrys | get only valid ones
+    console.log(ISO3166.getCountrysByArray(['DE','FR','totaly broken']));
+    // {
+    //   'DE': 'GERMANY',
+    //   'FR': 'FRANCE'
+    // }
   });
 ```
 
