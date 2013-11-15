@@ -265,14 +265,10 @@ mod.factory('ISO3166', function() {
 	};
 
 	holder.getCountrysByArray = function (countryCodes) {
-		console.log(countryCodes);
 		var countrys = {};
 		angular.forEach(countryCodes, function(key){
-			console.log(key);
-			console.log(holder.codeToCountry[key]);
-			if (angular.isDefined(this.codeToCountry[key])) {
-
-				countrys[key] = this.codeToCountry[key];
+			if (angular.isDefined(holder.codeToCountry[key])) {
+				countrys[key] = holder.codeToCountry[key];
 			}
 		});
 		return countrys;
