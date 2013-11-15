@@ -253,7 +253,7 @@ angular.module('iso-3166-country-codes', [])
       'EH': 'WESTERN SAHARA',
       'YE': 'YEMEN',
       'ZM': 'ZAMBIA',
-      'ZW': 'ZIMBABWE',
+      'ZW': 'ZIMBABWE'
     };
 
     holder.isCountryCode = function (input) {
