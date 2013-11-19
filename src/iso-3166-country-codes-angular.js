@@ -256,12 +256,22 @@ angular.module('iso-3166-country-codes', [])
       'ZW': 'ZIMBABWE'
     };
 
-    holder.isCountryCode = function (input) {
+    holder.isCountryCode = function(input) {
       return angular.isDefined(this.codeToCountry[input]);
     };
 
     holder.getCountryName = function(countryCode) {
       return this.codeToCountry[countryCode];
+    };
+
+    holder.getCountryNames = function(countryCodes) {
+      var countries = {};
+      angular.forEach(countryCodes, function(key) {
+        if (holder.isCountryCode(key)) {
+          countries[key] = holder.getCountryName(key);
+        }
+      });
+      return countries;
     };
 
     return holder;
