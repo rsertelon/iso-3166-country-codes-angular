@@ -55,7 +55,7 @@
 <ul>
 <li>Execute the following command: <code>bower install iso-3166-country-codes-angular --save</code>
 </li>
-<li>Add this line in your dependencies: <code>"iso-3166-country-codes-angular": "1.0.2"</code>
+<li>Add this line in your dependencies: <code>"iso-3166-country-codes-angular": "1.0.4"</code>
 </li>
 </ul><h2>
 <a name="features" class="anchor" href="#features"><span class="octicon octicon-link"></span></a>Features</h2>
@@ -65,7 +65,7 @@
 
 <p>You can have access to country codes information and two utilitary methods.</p>
 
-<div class="highlight"><pre><span class="c1">// Declare the factory as dependency</span>
+<div class="highlight highlight-javascript"><pre><span class="c1">// Declare the factory as dependency</span>
 <span class="nx">angular</span><span class="p">.</span><span class="nx">module</span><span class="p">(</span><span class="s1">'myApp'</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">controller</span><span class="p">(</span><span class="s1">'MyCtrl'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">ISO3166</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">// Test if a value is a country code</span>
@@ -76,12 +76,20 @@
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">ISO3166</span><span class="p">.</span><span class="nx">getCountryName</span><span class="p">(</span><span class="s1">'FR'</span><span class="p">));</span>
     <span class="c1">// FRANCE</span>
 
+    <span class="c1">// Get several country names at once (ignores invalid codes)</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">ISO3166</span><span class="p">.</span><span class="nx">getCountryNames</span><span class="p">([</span><span class="s1">'DE'</span><span class="p">,</span> <span class="s1">'FR'</span><span class="p">,</span> <span class="s1">'invalid'</span><span class="p">]);</span>
+    <span class="c1">// {</span>
+    <span class="c1">//   'DE': 'GERMANY',</span>
+    <span class="c1">//   'FR': 'FRANCE'</span>
+    <span class="c1">// }</span>
+
     <span class="c1">// Direct access to the data</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">ISO3166</span><span class="p">.</span><span class="nx">codeToCountry</span><span class="p">);</span>
     <span class="c1">// {</span>
     <span class="c1">//   'FR': 'FRANCE',</span>
     <span class="c1">//   ...</span>
     <span class="c1">// }</span>
+
   <span class="p">});</span>
 </pre></div>
 
@@ -90,7 +98,7 @@
 
 <p>If you get country codes from your REST server, you can print its standard name with the provided filter:</p>
 
-<div class="highlight"><pre><span class="c">&lt;!-- if countryCode is 'FR', will print 'FRANCE' --&gt;</span>
+<div class="highlight highlight-html"><pre><span class="c">&lt;!-- if countryCode is 'FR', will print 'FRANCE' --&gt;</span>
 <span class="nt">&lt;p&gt;</span>{{countryCode | isoCountry }}<span class="nt">&lt;/p&gt;</span>
 </pre></div>
 
@@ -99,7 +107,7 @@
 
 <p>If you want users to enter country codes, you can validate it like so (it fits in Angular validation process):</p>
 
-<div class="highlight"><pre><span class="nt">&lt;form</span> <span class="na">name=</span><span class="s">"form"</span> <span class="na">novalidate</span><span class="nt">&gt;</span>
+<div class="highlight highlight-html"><pre><span class="nt">&lt;form</span> <span class="na">name=</span><span class="s">"form"</span> <span class="na">novalidate</span><span class="nt">&gt;</span>
   <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"countryField"</span> <span class="na">country-code</span> <span class="nt">/&gt;</span>
   <span class="nt">&lt;span</span> <span class="na">ng-show=</span><span class="s">"form.countryField.$error.countrycode"</span><span class="nt">&gt;</span>This must be a country code!<span class="nt">&lt;/span&gt;</span>
 <span class="nt">&lt;/form&gt;</span>
