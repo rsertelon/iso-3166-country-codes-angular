@@ -31,12 +31,20 @@ angular.module('myApp')
     console.log(ISO3166.getCountryName('FR'));
     // FRANCE
 
+    // Get several country names at once (ignores invalid codes)
+    console.log(ISO3166.getCountryNames(['DE', 'FR', 'invalid']);
+    // {
+    //   'DE': 'GERMANY',
+    //   'FR': 'FRANCE'
+    // }
+
     // Direct access to the data
     console.log(ISO3166.codeToCountry);
     // {
     //   'FR': 'FRANCE',
     //   ...
     // }
+
   });
 ```
 
