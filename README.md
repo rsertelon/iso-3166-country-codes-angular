@@ -32,10 +32,21 @@ angular.module('myApp')
     // FRANCE
 
     // Get several country names at once (ignores invalid codes)
-    console.log(ISO3166.getCountryNames(['DE', 'FR', 'invalid']);
+    console.log(ISO3166.getCountryNames(['DE', 'FR', 'invalid']));
     // {
     //   'DE': 'GERMANY',
     //   'FR': 'FRANCE'
+    // }
+
+    // Get country name, manipulated by String methods.
+    console.log(ISO3166.getCountryName('FR', 'toLowerCase'));
+    // france
+
+    // Get several country names at once (ignores invalid codes)
+    console.log(ISO3166.getCountryNames(['DE', 'FR', 'invalid'], 'toLowerCase'));
+    // {
+    //   'DE': 'germany',
+    //   'FR': 'france'
     // }
 
     // Direct access to the data
