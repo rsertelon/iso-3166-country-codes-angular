@@ -11,7 +11,7 @@ This project is an ISO 3166 (Country codes) module for AngularJS. It provides:
 This library is available with the bower package manager, you can either:
 
 * Execute the following command: `bower install iso-3166-country-codes-angular --save`
-* Add this line in your dependencies: `"iso-3166-country-codes-angular": "1.0.3"`
+* Add this line in your dependencies: `"iso-3166-country-codes-angular": "1.0.4"`
 
 ## Features
 
@@ -32,10 +32,21 @@ angular.module('myApp')
     // FRANCE
 
     // Get several country names at once (ignores invalid codes)
-    console.log(ISO3166.getCountryNames(['DE', 'FR', 'invalid']);
+    console.log(ISO3166.getCountryNames(['DE', 'FR', 'invalid']));
     // {
     //   'DE': 'GERMANY',
     //   'FR': 'FRANCE'
+    // }
+
+    // Get country name, manipulated by String methods.
+    console.log(ISO3166.getCountryName('FR', 'toLowerCase'));
+    // france
+
+    // Get several country names at once (ignores invalid codes)
+    console.log(ISO3166.getCountryNames(['DE', 'FR', 'invalid'], 'toLowerCase'));
+    // {
+    //   'DE': 'germany',
+    //   'FR': 'france'
     // }
 
     // Direct access to the data
