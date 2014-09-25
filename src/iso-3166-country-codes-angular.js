@@ -263,18 +263,19 @@ angular.module('iso-3166-country-codes', [])
       return angular.isDefined(this.codeToCountry[input]);
     };
 
-    holder.getCountryName = function(countryCode) {
-      if (angular.isString(countryCode)) {
-        countryCode = countryCode.toUpperCase();
-      }
-      return this.codeToCountry[countryCode];
+    holder.getCountryName = function(countryCode, manipulator) {
+      manipulator = manipulator ? manipulator : 'toUpperCase';
+
+      return this.codeToCountry[countryCode][manipulator]();
     };
 
-    holder.getCountryNames = function(countryCodes) {
+    holder.getCountryNames = function(countryCodes, manipulator) {
+      manipulator = manipulator ? manipulator : 'toUpperCase';
+
       var countries = {};
       angular.forEach(countryCodes, function(key) {
         if (holder.isCountryCode(key)) {
-          countries[key] = holder.getCountryName(key);
+          countries[key] = holder.getCountryName(key, manipulator);
         }
       });
       return countries;
