@@ -256,11 +256,24 @@ angular.module('iso-3166-country-codes', [])
       'ZW': 'ZIMBABWE'
     };
 
+    holder.countryToCode = {};
+
+    for(var key in holder.codeToCountry) {
+      holder.countryToCode[holder.codeToCountry[key]] = key;
+    }
+
     holder.isCountryCode = function(input) {
       if (angular.isString(input)) {
         input = input.toUpperCase();
       }
       return angular.isDefined(this.codeToCountry[input]);
+    };
+
+    holder.getCountryCode = function(countryName, manipulator) {
+      var countryCode = this.countryToCode[countryName.toUpperCase()];
+      manipulator = manipulator ? manipulator : 'toLowerCase';
+
+      return countryCode && countryCode[manipulator]();
     };
 
     holder.getCountryName = function(countryCode, manipulator) {
@@ -286,6 +299,12 @@ angular.module('iso-3166-country-codes', [])
   .filter('isoCountry', ['ISO3166', function(ISO3166){
     return function (input) {
       var result = ISO3166.getCountryName(input);
+      return angular.isUndefined(result) ? input : result;
+    };
+  }])
+  .filter('isoCode', ['ISO3166', function(ISO3166){
+    return function (input) {
+      var result = ISO3166.getCountryCode(input);
       return angular.isUndefined(result) ? input : result;
     };
   }])
