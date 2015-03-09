@@ -82,7 +82,7 @@ On the other hand, if you get country names from your REST server, you can print
 
 ```html
 <!-- if countryName is 'FRANCE', will print 'FR' -->
-<p>{{countryName | isoCode }}</p>
+<p>{{countryName | isoCountryCode }}</p>
 ```
 
 ### Validation directive

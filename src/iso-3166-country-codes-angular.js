@@ -302,7 +302,7 @@ angular.module('iso-3166-country-codes', [])
       return angular.isUndefined(result) ? input : result;
     };
   }])
-  .filter('isoCode', ['ISO3166', function(ISO3166){
+  .filter('isoCountryCode', ['ISO3166', function(ISO3166){
     return function (input) {
       var result = ISO3166.getCountryCode(input);
       return angular.isUndefined(result) ? input : result;
