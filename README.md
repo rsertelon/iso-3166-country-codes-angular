@@ -1,3 +1,5 @@
+>Note that this README is for the currently developed version of the library
+
 ## ISO 3166 for Angular JS
 
 This project is an ISO 3166 (Country codes) module for AngularJS. It provides:
@@ -11,13 +13,13 @@ This project is an ISO 3166 (Country codes) module for AngularJS. It provides:
 This library is available with the bower package manager, you can either:
 
 * Execute the following command: `bower install iso-3166-country-codes-angular --save`
-* Add this line in your dependencies: `"iso-3166-country-codes-angular": "1.0.4"`
+* Add this line in your dependencies: `"iso-3166-country-codes-angular": "1.1.0"`
 
 ## Features
 
 ### Factory
 
-You can have access to country codes information and two utilitary methods.
+You can have access to country codes information and several utilitary methods.
 
 ```javascript
 // Declare the factory as dependency
@@ -49,6 +51,14 @@ angular.module('myApp')
     //   'FR': 'france'
     // }
 
+    // Get country code by country name
+    console.log(ISO3166.getCountryCode('FRANCE'));
+    // FR
+
+    // Get country code by country name, manipulated by String methods.
+    console.log(ISO3166.getCountryCode('FRANCE'), 'toLowerCase');
+    // fr
+
     // Direct access to the data
     console.log(ISO3166.codeToCountry);
     // {
@@ -61,11 +71,18 @@ angular.module('myApp')
 
 ### Filter
 
-If you get country codes from your REST server, you can print its standard name with the provided filter:
+If you get country codes from your REST server, you can print their standard names with the provided filter:
 
 ```html
 <!-- if countryCode is 'FR', will print 'FRANCE' -->
 <p>{{countryCode | isoCountry }}</p>
+```
+
+On the other hand, if you get country names from your REST server, you can print their ISO codes:
+
+```html
+<!-- if countryName is 'FRANCE', will print 'FR' -->
+<p>{{countryName | isoCode }}</p>
 ```
 
 ### Validation directive
