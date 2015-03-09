@@ -1,0 +1,24 @@
+Next
+  - Fixes possible directive exception (thanks @sullivanpt)
+  - Adds reverse lookup: from country name to its code (thanks @dgdavid)
+
+1.1.0
+  - Adds the possibility to manipulate country names (thanks @davestone)
+
+1.0.4
+  - Allows one to use non uppercase country codes in some methods (thanks @ItsLeeOwen)
+
+1.0.3 (Broken version, use 1.0.4)
+  - Removes last comma from country list (fixes IE problem)
+  - Adds getCountryNames method to get several country names at once
+  - Bower main file points to the minified version
+
+1.0.2
+  - Library has been given to the public domain (no copyright on this code)
+  - Filter renames isoCountry instead of the too generic country
+
+1.0.1
+  - Fixes service dependencies after minification
+
+1.0.0
+  - First version of the library
