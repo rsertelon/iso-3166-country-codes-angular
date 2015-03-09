@@ -1,3 +1,7 @@
+Next
+  - Fixes possible directive exception (thanks @sullivanpt)
+  - Adds reverse lookup: from country name to its code (thanks @dgdavid)
+
 1.1.0
   - Adds the possibility to manipulate country names (thanks @davestone)
 
