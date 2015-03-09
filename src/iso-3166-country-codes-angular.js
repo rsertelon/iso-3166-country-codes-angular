@@ -271,7 +271,7 @@ angular.module('iso-3166-country-codes', [])
 
     holder.getCountryCode = function(countryName, manipulator) {
       var countryCode = this.countryToCode[countryName.toUpperCase()];
-      manipulator = manipulator ? manipulator : 'toLowerCase';
+      manipulator = manipulator ? manipulator : 'toUpperCase';
 
       return countryCode && countryCode[manipulator]();
     };
