@@ -1,8 +1,8 @@
 1.1.0
-  - Adds the possibility to manipulate country names
+  - Adds the possibility to manipulate country names (thanks @davestone)
 
 1.0.4
-  - Allows one to use non uppercase country codes in some methods
+  - Allows one to use non uppercase country codes in some methods (thanks @ItsLeeOwen)
 
 1.0.3 (Broken version, use 1.0.4)
   - Removes last comma from country list (fixes IE problem)
