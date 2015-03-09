@@ -57,7 +57,7 @@
 <ul>
 <li>Execute the following command: <code>bower install iso-3166-country-codes-angular --save</code>
 </li>
-<li>Add this line in your dependencies: <code>"iso-3166-country-codes-angular": "1.0.4"</code>
+<li>Add this line in your dependencies: <code>"iso-3166-country-codes-angular": "1.1.1"</code>
 </li>
 </ul>
 
@@ -67,7 +67,7 @@
 <h3>
 <a id="factory" class="anchor" href="#factory" aria-hidden="true"><span class="octicon octicon-link"></span></a>Factory</h3>
 
-<p>You can have access to country codes information and two utilitary methods.</p>
+<p>You can have access to country codes information and several utilitary methods.</p>
 
 <div class="highlight highlight-javascript"><pre><span class="pl-c">// Declare the factory as dependency</span>
 angular.module(<span class="pl-s1"><span class="pl-pds">'</span>myApp<span class="pl-pds">'</span></span>)
@@ -98,6 +98,14 @@ angular.module(<span class="pl-s1"><span class="pl-pds">'</span>myApp<span class
     <span class="pl-c">//   'FR': 'france'</span>
     <span class="pl-c">// }</span>
 
+    <span class="pl-c">// Get country code by country name</span>
+    <span class="pl-en">console</span><span class="pl-s3">.log</span>(ISO3166.getCountryCode(<span class="pl-s1"><span class="pl-pds">'</span>FRANCE<span class="pl-pds">'</span></span>));
+    <span class="pl-c">// FR</span>
+
+    <span class="pl-c">// Get country code by country name, manipulated by String methods.</span>
+    <span class="pl-en">console</span><span class="pl-s3">.log</span>(ISO3166.getCountryCode(<span class="pl-s1"><span class="pl-pds">'</span>FRANCE<span class="pl-pds">'</span></span>), <span class="pl-s1"><span class="pl-pds">'</span>toLowerCase<span class="pl-pds">'</span></span>);
+    <span class="pl-c">// fr</span>
+
     <span class="pl-c">// Direct access to the data</span>
     <span class="pl-en">console</span><span class="pl-s3">.log</span>(ISO3166.codeToCountry);
     <span class="pl-c">// {</span>
@@ -110,10 +118,15 @@ angular.module(<span class="pl-s1"><span class="pl-pds">'</span>myApp<span class
 <h3>
 <a id="filter" class="anchor" href="#filter" aria-hidden="true"><span class="octicon octicon-link"></span></a>Filter</h3>
 
-<p>If you get country codes from your REST server, you can print its standard name with the provided filter:</p>
+<p>If you get country codes from your REST server, you can print their standard names with the provided filter:</p>
 
 <div class="highlight highlight-html"><pre><span class="pl-c">&lt;!-- if countryCode is 'FR', will print 'FRANCE' --&gt;</span>
 &lt;<span class="pl-ent">p</span>&gt;{{countryCode | isoCountry }}&lt;/<span class="pl-ent">p</span>&gt;</pre></div>
+
+<p>On the other hand, if you get country names from your REST server, you can print their ISO codes:</p>
+
+<div class="highlight highlight-html"><pre><span class="pl-c">&lt;!-- if countryName is 'FRANCE', will print 'FR' --&gt;</span>
+&lt;<span class="pl-ent">p</span>&gt;{{countryName | isoCountryCode }}&lt;/<span class="pl-ent">p</span>&gt;</pre></div>
 
 <h3>
 <a id="validation-directive" class="anchor" href="#validation-directive" aria-hidden="true"><span class="octicon octicon-link"></span></a>Validation directive</h3>
