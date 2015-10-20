@@ -277,13 +277,13 @@ angular.module('iso-3166-country-codes', [])
     };
 
     holder.getCountryName = function(countryCode, manipulator) {
-      manipulator = manipulator ? manipulator : 'toUpperCase';
+      manipulator = manipulator ? manipulator : 'toString';
 
       return this.codeToCountry[countryCode] && this.codeToCountry[countryCode][manipulator]();
     };
 
     holder.getCountryNames = function(countryCodes, manipulator) {
-      manipulator = manipulator ? manipulator : 'toUpperCase';
+      manipulator = manipulator ? manipulator : 'toString';
 
       var countries = {};
       angular.forEach(countryCodes, function(key) {
