@@ -193,7 +193,7 @@ angular.module('iso-3166-country-codes', [])
       'SH': 'Saint Helena, Ascension and Tristan Da Cunha',
       'KN': 'Saint Kitts and Nevis',
       'LC': 'Saint Lucia',
-      'MF': 'Saint Martin (french Part)',
+      'MF': 'Saint Martin (French Part)',
       'PM': 'Saint Pierre and Miquelon',
       'VC': 'Saint Vincent and The Grenadines',
       'WS': 'Samoa',
