@@ -23,7 +23,7 @@ You can have access to country codes information and several utilitary methods.
 
 ```javascript
 // Declare the factory as dependency
-angular.module('myApp')
+angular.module('myApp', ["iso-3166-country-codes"])
   .controller('MyCtrl', function (ISO3166) {
     // Test if a value is a country code
     console.log(ISO3166.isCountryCode('FR')); // true
