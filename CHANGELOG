@@ -1,3 +1,8 @@
+1.2.0
+  - Adds support for CommonJS standard (thanks @seanhealy)
+  - Country names are now capitalized (thanks @mrhenry)
+  - Adds array of country codes
+
 1.1.1
   - Fixes possible directive exception (thanks @sullivanpt)
   - Adds reverse lookup: from country name to its code (thanks @dgdavid)
