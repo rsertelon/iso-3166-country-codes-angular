@@ -257,9 +257,11 @@ angular.module('iso-3166-country-codes', [])
     };
 
     holder.countryToCode = {};
+    holder.countryCodes = [];
 
     for(var key in holder.codeToCountry) {
       holder.countryToCode[holder.codeToCountry[key]] = key;
+      holder.countryCodes.push(key);
     }
 
     holder.isCountryCode = function(input) {
