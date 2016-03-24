@@ -36,8 +36,8 @@ angular.module('myApp', ["iso-3166-country-codes"])
     // Get several country names at once (ignores invalid codes)
     console.log(ISO3166.getCountryNames(['DE', 'FR', 'invalid']));
     // {
-    //   'DE': 'GERMANY',
-    //   'FR': 'FRANCE'
+    //   'DE': 'Germany',
+    //   'FR': 'France'
     // }
 
     // Get country name, manipulated by String methods.
@@ -52,19 +52,26 @@ angular.module('myApp', ["iso-3166-country-codes"])
     // }
 
     // Get country code by country name
-    console.log(ISO3166.getCountryCode('FRANCE'));
+    console.log(ISO3166.getCountryCode('France'));
     // FR
 
     // Get country code by country name, manipulated by String methods.
-    console.log(ISO3166.getCountryCode('FRANCE'), 'toLowerCase');
+    console.log(ISO3166.getCountryCode('France'), 'toLowerCase');
     // fr
 
     // Direct access to the data
     console.log(ISO3166.codeToCountry);
     // {
-    //   'FR': 'FRANCE',
+    //   'FR': 'France',
     //   ...
     // }
+    console.log(ISO3166.countryToCode);
+    // {
+    //   'France': 'FR'
+    //  ...
+    // }
+    console.log(ISO3166.countryCodes);
+    // ['AF', 'AX', 'AL', ... ]
 
   });
 ```
@@ -74,14 +81,14 @@ angular.module('myApp', ["iso-3166-country-codes"])
 If you get country codes from your REST server, you can print their standard names with the provided filter:
 
 ```html
-<!-- if countryCode is 'FR', will print 'FRANCE' -->
+<!-- if countryCode is 'FR', will print 'France' -->
 <p>{{countryCode | isoCountry }}</p>
 ```
 
 On the other hand, if you get country names from your REST server, you can print their ISO codes:
 
 ```html
-<!-- if countryName is 'FRANCE', will print 'FR' -->
+<!-- if countryName is 'France', will print 'FR' -->
 <p>{{countryName | isoCountryCode }}</p>
 ```
 
@@ -98,7 +105,7 @@ If you want users to enter country codes, you can validate it like so (it fits i
 
 ## Issues, Feature request
 
-You can use [Github's issues](https://github.com/BluePyth/iso-3166-country-codes-angular/issues) to submit feature requests and bug reports.
+You can use [Github's issues](https://github.com/rsertelon/iso-3166-country-codes-angular/issues) to submit feature requests and bug reports.
 
 ## Contributions
 
