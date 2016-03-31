@@ -1,45 +1,26 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en-us">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta charset="UTF-8">
     <title>Iso-3166-country-codes-angular by rsertelon</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/respond.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <!--[if lt IE 8]>
-    <link rel="stylesheet" href="stylesheets/ie.css">
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
   <body>
-      <div id="header">
-        <nav>
-          <li class="fork"><a href="https://github.com/rsertelon/iso-3166-country-codes-angular">View On GitHub</a></li>
-          <li class="downloads"><a href="https://github.com/rsertelon/iso-3166-country-codes-angular/zipball/master">ZIP</a></li>
-          <li class="downloads"><a href="https://github.com/rsertelon/iso-3166-country-codes-angular/tarball/master">TAR</a></li>
-          <li class="title">DOWNLOADS</li>
-        </nav>
-      </div><!-- end header -->
+    <section class="page-header">
+      <h1 class="project-name">Iso-3166-country-codes-angular</h1>
+      <h2 class="project-tagline">Javascript lib for ISO 3166 Country codes</h2>
+      <a href="https://github.com/rsertelon/iso-3166-country-codes-angular" class="btn">View on GitHub</a>
+      <a href="https://github.com/rsertelon/iso-3166-country-codes-angular/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/rsertelon/iso-3166-country-codes-angular/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
 
-    <div class="wrapper">
-
-      <section>
-        <div id="title">
-          <h1>Iso-3166-country-codes-angular</h1>
-          <p>Javascript lib for ISO 3166 Country codes</p>
-          <hr>
-          <span class="credits left">Project maintained by <a href="https://github.com/rsertelon">rsertelon</a></span>
-          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
-        </div>
-
-        <h2>
-<a id="iso-3166-for-angular-js" class="anchor" href="#iso-3166-for-angular-js" aria-hidden="true"><span class="octicon octicon-link"></span></a>ISO 3166 for Angular JS</h2>
+    <section class="main-content">
+      <h2>
+<a id="iso-3166-for-angular-js" class="anchor" href="#iso-3166-for-angular-js" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>ISO 3166 for Angular JS</h2>
 
 <p>This project is an ISO 3166 (Country codes) module for AngularJS. It provides:</p>
 
@@ -50,101 +31,117 @@
 </ul>
 
 <h2>
-<a id="get-it" class="anchor" href="#get-it" aria-hidden="true"><span class="octicon octicon-link"></span></a>Get it</h2>
+<a id="get-it" class="anchor" href="#get-it" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Get it</h2>
 
 <p>This library is available with the bower package manager, you can either:</p>
 
 <ul>
 <li>Execute the following command: <code>bower install iso-3166-country-codes-angular --save</code>
 </li>
-<li>Add this line in your dependencies: <code>"iso-3166-country-codes-angular": "1.1.1"</code>
+<li>Add this line in your dependencies: <code>"iso-3166-country-codes-angular": "1.2.1"</code>
+</li>
+</ul>
+
+<p>If you prefer using NPM, it is now available at npmjs.com. To get it you can either:</p>
+
+<ul>
+<li>Execute the following command: <code>npm i iso-3166-country-codes-angular</code>
+</li>
+<li>Add this line in your <code>package.json</code>: <code>"iso-3166-country-codes-angular": "1.2.1"</code>
 </li>
 </ul>
 
 <h2>
-<a id="features" class="anchor" href="#features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Features</h2>
+<a id="features" class="anchor" href="#features" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Features</h2>
 
 <h3>
-<a id="factory" class="anchor" href="#factory" aria-hidden="true"><span class="octicon octicon-link"></span></a>Factory</h3>
+<a id="factory" class="anchor" href="#factory" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Factory</h3>
 
 <p>You can have access to country codes information and several utilitary methods.</p>
 
-<div class="highlight highlight-javascript"><pre><span class="pl-c">// Declare the factory as dependency</span>
-angular.module(<span class="pl-s1"><span class="pl-pds">'</span>myApp<span class="pl-pds">'</span></span>)
-  .controller(<span class="pl-s1"><span class="pl-pds">'</span>MyCtrl<span class="pl-pds">'</span></span>, <span class="pl-st">function</span> (<span class="pl-vpf">ISO3166</span>) {
+<div class="highlight highlight-source-js"><pre><span class="pl-c">// Declare the factory as dependency</span>
+<span class="pl-smi">angular</span>.<span class="pl-en">module</span>(<span class="pl-s"><span class="pl-pds">'</span>myApp<span class="pl-pds">'</span></span>, [<span class="pl-s"><span class="pl-pds">"</span>iso-3166-country-codes<span class="pl-pds">"</span></span>])
+  .<span class="pl-en">controller</span>(<span class="pl-s"><span class="pl-pds">'</span>MyCtrl<span class="pl-pds">'</span></span>, <span class="pl-k">function</span> (<span class="pl-c1">ISO3166</span>) {
     <span class="pl-c">// Test if a value is a country code</span>
-    <span class="pl-en">console</span><span class="pl-s3">.log</span>(ISO3166.isCountryCode(<span class="pl-s1"><span class="pl-pds">'</span>FR<span class="pl-pds">'</span></span>)); <span class="pl-c">// true</span>
-    <span class="pl-en">console</span><span class="pl-s3">.log</span>(ISO3166.isCountryCode(<span class="pl-s1"><span class="pl-pds">'</span>FRA<span class="pl-pds">'</span></span>)); <span class="pl-c">// false</span>
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-c1">ISO3166</span>.<span class="pl-en">isCountryCode</span>(<span class="pl-s"><span class="pl-pds">'</span>FR<span class="pl-pds">'</span></span>)); <span class="pl-c">// true</span>
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-c1">ISO3166</span>.<span class="pl-en">isCountryCode</span>(<span class="pl-s"><span class="pl-pds">'</span>FRA<span class="pl-pds">'</span></span>)); <span class="pl-c">// false</span>
 
     <span class="pl-c">// Get country name</span>
-    <span class="pl-en">console</span><span class="pl-s3">.log</span>(ISO3166.getCountryName(<span class="pl-s1"><span class="pl-pds">'</span>FR<span class="pl-pds">'</span></span>));
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-c1">ISO3166</span>.<span class="pl-en">getCountryName</span>(<span class="pl-s"><span class="pl-pds">'</span>FR<span class="pl-pds">'</span></span>));
     <span class="pl-c">// FRANCE</span>
 
     <span class="pl-c">// Get several country names at once (ignores invalid codes)</span>
-    <span class="pl-en">console</span><span class="pl-s3">.log</span>(ISO3166.getCountryNames([<span class="pl-s1"><span class="pl-pds">'</span>DE<span class="pl-pds">'</span></span>, <span class="pl-s1"><span class="pl-pds">'</span>FR<span class="pl-pds">'</span></span>, <span class="pl-s1"><span class="pl-pds">'</span>invalid<span class="pl-pds">'</span></span>]));
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-c1">ISO3166</span>.<span class="pl-en">getCountryNames</span>([<span class="pl-s"><span class="pl-pds">'</span>DE<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>FR<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>invalid<span class="pl-pds">'</span></span>]));
     <span class="pl-c">// {</span>
-    <span class="pl-c">//   'DE': 'GERMANY',</span>
-    <span class="pl-c">//   'FR': 'FRANCE'</span>
+    <span class="pl-c">//   'DE': 'Germany',</span>
+    <span class="pl-c">//   'FR': 'France'</span>
     <span class="pl-c">// }</span>
 
     <span class="pl-c">// Get country name, manipulated by String methods.</span>
-    <span class="pl-en">console</span><span class="pl-s3">.log</span>(ISO3166.getCountryName(<span class="pl-s1"><span class="pl-pds">'</span>FR<span class="pl-pds">'</span></span>, <span class="pl-s1"><span class="pl-pds">'</span>toLowerCase<span class="pl-pds">'</span></span>));
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-c1">ISO3166</span>.<span class="pl-en">getCountryName</span>(<span class="pl-s"><span class="pl-pds">'</span>FR<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>toLowerCase<span class="pl-pds">'</span></span>));
     <span class="pl-c">// france</span>
 
     <span class="pl-c">// Get several country names at once (ignores invalid codes)</span>
-    <span class="pl-en">console</span><span class="pl-s3">.log</span>(ISO3166.getCountryNames([<span class="pl-s1"><span class="pl-pds">'</span>DE<span class="pl-pds">'</span></span>, <span class="pl-s1"><span class="pl-pds">'</span>FR<span class="pl-pds">'</span></span>, <span class="pl-s1"><span class="pl-pds">'</span>invalid<span class="pl-pds">'</span></span>], <span class="pl-s1"><span class="pl-pds">'</span>toLowerCase<span class="pl-pds">'</span></span>));
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-c1">ISO3166</span>.<span class="pl-en">getCountryNames</span>([<span class="pl-s"><span class="pl-pds">'</span>DE<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>FR<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>invalid<span class="pl-pds">'</span></span>], <span class="pl-s"><span class="pl-pds">'</span>toLowerCase<span class="pl-pds">'</span></span>));
     <span class="pl-c">// {</span>
     <span class="pl-c">//   'DE': 'germany',</span>
     <span class="pl-c">//   'FR': 'france'</span>
     <span class="pl-c">// }</span>
 
     <span class="pl-c">// Get country code by country name</span>
-    <span class="pl-en">console</span><span class="pl-s3">.log</span>(ISO3166.getCountryCode(<span class="pl-s1"><span class="pl-pds">'</span>FRANCE<span class="pl-pds">'</span></span>));
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-c1">ISO3166</span>.<span class="pl-en">getCountryCode</span>(<span class="pl-s"><span class="pl-pds">'</span>France<span class="pl-pds">'</span></span>));
     <span class="pl-c">// FR</span>
 
     <span class="pl-c">// Get country code by country name, manipulated by String methods.</span>
-    <span class="pl-en">console</span><span class="pl-s3">.log</span>(ISO3166.getCountryCode(<span class="pl-s1"><span class="pl-pds">'</span>FRANCE<span class="pl-pds">'</span></span>), <span class="pl-s1"><span class="pl-pds">'</span>toLowerCase<span class="pl-pds">'</span></span>);
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-c1">ISO3166</span>.<span class="pl-en">getCountryCode</span>(<span class="pl-s"><span class="pl-pds">'</span>France<span class="pl-pds">'</span></span>), <span class="pl-s"><span class="pl-pds">'</span>toLowerCase<span class="pl-pds">'</span></span>);
     <span class="pl-c">// fr</span>
 
     <span class="pl-c">// Direct access to the data</span>
-    <span class="pl-en">console</span><span class="pl-s3">.log</span>(ISO3166.codeToCountry);
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-c1">ISO3166</span>.<span class="pl-smi">codeToCountry</span>);
     <span class="pl-c">// {</span>
-    <span class="pl-c">//   'FR': 'FRANCE',</span>
+    <span class="pl-c">//   'FR': 'France',</span>
     <span class="pl-c">//   ...</span>
     <span class="pl-c">// }</span>
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-c1">ISO3166</span>.<span class="pl-smi">countryToCode</span>);
+    <span class="pl-c">// {</span>
+    <span class="pl-c">//   'France': 'FR'</span>
+    <span class="pl-c">//  ...</span>
+    <span class="pl-c">// }</span>
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-c1">ISO3166</span>.<span class="pl-smi">countryCodes</span>);
+    <span class="pl-c">// ['AF', 'AX', 'AL', ... ]</span>
 
   });</pre></div>
 
 <h3>
-<a id="filter" class="anchor" href="#filter" aria-hidden="true"><span class="octicon octicon-link"></span></a>Filter</h3>
+<a id="filter" class="anchor" href="#filter" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Filter</h3>
 
 <p>If you get country codes from your REST server, you can print their standard names with the provided filter:</p>
 
-<div class="highlight highlight-html"><pre><span class="pl-c">&lt;!-- if countryCode is 'FR', will print 'FRANCE' --&gt;</span>
+<div class="highlight highlight-text-html-basic"><pre><span class="pl-c">&lt;!-- if countryCode is 'FR', will print 'France' --&gt;</span>
 &lt;<span class="pl-ent">p</span>&gt;{{countryCode | isoCountry }}&lt;/<span class="pl-ent">p</span>&gt;</pre></div>
 
 <p>On the other hand, if you get country names from your REST server, you can print their ISO codes:</p>
 
-<div class="highlight highlight-html"><pre><span class="pl-c">&lt;!-- if countryName is 'FRANCE', will print 'FR' --&gt;</span>
+<div class="highlight highlight-text-html-basic"><pre><span class="pl-c">&lt;!-- if countryName is 'France', will print 'FR' --&gt;</span>
 &lt;<span class="pl-ent">p</span>&gt;{{countryName | isoCountryCode }}&lt;/<span class="pl-ent">p</span>&gt;</pre></div>
 
 <h3>
-<a id="validation-directive" class="anchor" href="#validation-directive" aria-hidden="true"><span class="octicon octicon-link"></span></a>Validation directive</h3>
+<a id="validation-directive" class="anchor" href="#validation-directive" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Validation directive</h3>
 
 <p>If you want users to enter country codes, you can validate it like so (it fits in Angular validation process):</p>
 
-<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">form</span> <span class="pl-e">name</span>=<span class="pl-s1"><span class="pl-pds">"</span>form<span class="pl-pds">"</span></span> <span class="pl-e">novalidate</span>&gt;
-  &lt;<span class="pl-ent">input</span> <span class="pl-e">type</span>=<span class="pl-s1"><span class="pl-pds">"</span>text<span class="pl-pds">"</span></span> <span class="pl-e">name</span>=<span class="pl-s1"><span class="pl-pds">"</span>countryField<span class="pl-pds">"</span></span> <span class="pl-e">country-code</span> /&gt;
-  &lt;<span class="pl-ent">span</span> <span class="pl-e">ng-show</span>=<span class="pl-s1"><span class="pl-pds">"</span>form.countryField.$error.countrycode<span class="pl-pds">"</span></span>&gt;This must be a country code!&lt;/<span class="pl-ent">span</span>&gt;
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">form</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>form<span class="pl-pds">"</span></span> <span class="pl-e">novalidate</span>&gt;
+  &lt;<span class="pl-ent">input</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>text<span class="pl-pds">"</span></span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>countryField<span class="pl-pds">"</span></span> <span class="pl-e">country-code</span> /&gt;
+  &lt;<span class="pl-ent">span</span> <span class="pl-e">ng-show</span>=<span class="pl-s"><span class="pl-pds">"</span>form.countryField.$error.countrycode<span class="pl-pds">"</span></span>&gt;This must be a country code!&lt;/<span class="pl-ent">span</span>&gt;
 &lt;/<span class="pl-ent">form</span>&gt;</pre></div>
 
 <h2>
-<a id="issues-feature-request" class="anchor" href="#issues-feature-request" aria-hidden="true"><span class="octicon octicon-link"></span></a>Issues, Feature request</h2>
+<a id="issues-feature-request" class="anchor" href="#issues-feature-request" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Issues, Feature request</h2>
 
-<p>You can use <a href="https://github.com/BluePyth/iso-3166-country-codes-angular/issues">Github's issues</a> to submit feature requests and bug reports.</p>
+<p>You can use <a href="https://github.com/rsertelon/iso-3166-country-codes-angular/issues">Github's issues</a> to submit feature requests and bug reports.</p>
 
 <h2>
-<a id="contributions" class="anchor" href="#contributions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contributions</h2>
+<a id="contributions" class="anchor" href="#contributions" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contributions</h2>
 
 <p>This project gladly accepts contributions. However, you must agree to give your work explicitely to public domain. To do so, just put this statement in the pull request definition:</p>
 
@@ -156,13 +153,18 @@ present and future rights to this software under copyright law.
 </code></pre>
 
 <h2>
-<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h2>
 
 <p>This software is given to the public domain. For more information, see the <code>UNLICENSE</code> file.</p>
-      </section>
 
-    </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-    
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/rsertelon/iso-3166-country-codes-angular">Iso-3166-country-codes-angular</a> is maintained by <a href="https://github.com/rsertelon">rsertelon</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
   </body>
 </html>
