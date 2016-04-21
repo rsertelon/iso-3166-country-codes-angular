@@ -20,6 +20,10 @@ If you prefer using NPM, it is now available at npmjs.com. To get it you can eit
 * Execute the following command: `npm i iso-3166-country-codes-angular`
 * Add this line in your `package.json`: `"iso-3166-country-codes-angular": "1.2.1"`
 
+## Use it
+
+Add `iso-3166-country-codes`` to your module dependencies. 
+
 ## Features
 
 ### Factory
