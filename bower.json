@@ -1,6 +1,6 @@
 {
   "name": "iso-3166-country-codes-angular",
-  "version": "1.1.1",
+  "version": "1.2.1",
   "main": "dist/iso-3166-country-codes-angular.min.js",
   "ignore": [
     "**/.*",
