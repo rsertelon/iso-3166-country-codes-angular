@@ -13,7 +13,16 @@ This project is an ISO 3166 (Country codes) module for AngularJS. It provides:
 This library is available with the bower package manager, you can either:
 
 * Execute the following command: `bower install iso-3166-country-codes-angular --save`
-* Add this line in your dependencies: `"iso-3166-country-codes-angular": "1.1.1"`
+* Add this line in your dependencies: `"iso-3166-country-codes-angular": "1.2.1"`
+
+If you prefer using NPM, it is now available at npmjs.com. To get it you can either:
+
+* Execute the following command: `npm i iso-3166-country-codes-angular`
+* Add this line in your `package.json`: `"iso-3166-country-codes-angular": "1.2.1"`
+
+## Use it
+
+Add `iso-3166-country-codes`` to your module dependencies. 
 
 ## Features
 
